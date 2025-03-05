@@ -1,26 +1,23 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.animate-circles-10 { animation: animate 10s linear infinite; }
+.animate-circles-12 { animation: animate 12s linear infinite; }
+.animate-circles-15 { animation: animate 15s linear infinite; }
+.animate-circles-18 { animation: animate 18s linear infinite; }
+.animate-circles-20 { animation: animate 20s linear infinite; }
+.animate-circles-22 { animation: animate 22s linear infinite; }
+.animate-circles-25 { animation: animate 25s linear infinite; }
+.animate-circles-30 { animation: animate 30s linear infinite; }
+.animate-circles-35 { animation: animate 35s linear infinite; }
+.animate-circles-45 { animation: animate 45s linear infinite; }
